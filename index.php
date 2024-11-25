@@ -6,7 +6,7 @@
 <body>
 	<div class="container">
 		<div class="jumbotron">
-			<h1 class="display-1"> foto wedstrijd</h1>
+			<h1 class="display-1"> takenlijst</h1>
 		</div>
 		<div class="row">
 			<div class="col tegel knoppen">
