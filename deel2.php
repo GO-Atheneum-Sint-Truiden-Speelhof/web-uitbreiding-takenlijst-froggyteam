@@ -5,11 +5,12 @@
 
 <body>
 	<div class="container">
-	<?php 
-		include('includes/menu.php');
-	 	include('includes/login.php');
-		include('includes/footer.php');
-	?>
+		<?php 
+        include('includes/menu.php');
+			include('includes/deel.php');
+		
+			include('includes/footer.php');
+		?>
 	</div>
 </body>
 

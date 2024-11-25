@@ -3,10 +3,13 @@
 			<div class="collapse navbar-collapse" id="menubalk">
 				<ul class="navbar-nav mr-auto">
 					<li class="nav-item">
-						<a href="includes/deel.php?page=deel" class="nav-link">takenlijst</a>
+						<a href="deel2.php?page=deel" class="nav-link">takenlijst</a>
 					</li>
 					<li class="nav-item">
-						<a href="login.php?page=login" class="nav-link">login</a>
+						<a href="login2.php?page=login" class="nav-link">login</a>
+					</li>
+					<li class="nav-item">
+						<a href="taken2.php?page=taken" class="nav-link">taken</a>
 					</li>
 				</ul>
 			</div>

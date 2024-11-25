@@ -49,7 +49,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <body>
 <div class="container">
     <h2>Inloggen</h2>
-    <form method="post" action="deel.php">
+    <form method="post" action="deel2.php">
         <div class="mb-3">
             <label for="username">Gebruikersnaam:</label>
             <input type="text" name="username" id="username" class="form-control" required>
