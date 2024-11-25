@@ -7,7 +7,7 @@
 	<div class="container">
 	<?php 
 		include('includes/menu.php');
-        include('includes/login.php');
+        include('includes/regis.php');
 		include('includes/footer.php');
 	?>
 	</div>
