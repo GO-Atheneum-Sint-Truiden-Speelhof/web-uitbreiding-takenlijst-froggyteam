@@ -31,10 +31,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             header("Location: home.php");
             exit;
         } else {
-            $error = "Wachtwoord onjuist.";
+            $error = "wachtwoord of gebruikersnaam fout.";
         }
     } else {
-        $error = "Gebruikersnaam bestaat niet.";
+        $error = "wachtwoord of gebruikersnaam fout.";
     }
 }
 ?>
