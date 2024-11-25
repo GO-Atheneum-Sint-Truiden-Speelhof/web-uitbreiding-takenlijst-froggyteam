@@ -62,7 +62,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <button type="submit" class="btn btn-primary">Login</button>
     </form>
     <?php if ($error) { echo "<div class='alert alert-danger'>$error</div>"; } ?>
-    <a href="regis.php">Nog geen account? Registreer hier.</a>
+    <a href="includes/regis.php">Nog geen account? Registreer hier.</a>
 </div>
 </body>
 </html>
