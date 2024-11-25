@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $message = "Gebruikersnaam bestaat al.";
     } else {
         $hashed_password = password_hash($password, PASSWORD_DEFAULT);
-
+        echo $hashed_password;
         // Gebruiker toevoegen aan database
         $stmt = $conn->prepare("INSERT INTO user (username, password) VALUES (?, ?)");
         $stmt->bind_param("ss", $username, $hashed_password);

@@ -3,7 +3,7 @@
 			<div class="collapse navbar-collapse" id="menubalk">
 				<ul class="navbar-nav mr-auto">
 					<li class="nav-item">
-						<a href="home.php?page=deel" class="nav-link">Deelnemen</a>
+						<a href="includes/deel.php?page=deel" class="nav-link">takenlijst</a>
 					</li>
 					<li class="nav-item">
 						<a href="login.php?page=login" class="nav-link">login</a>

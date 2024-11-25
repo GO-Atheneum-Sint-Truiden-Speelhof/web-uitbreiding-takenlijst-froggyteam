@@ -3,10 +3,9 @@ session_start();
 
 $host = 'localhost';
 $username = 'root';
-$password = ''; // Databasewachtwoord indien nodig
+$password = '';
 $database = 'todo';
 
-// Verbinding maken met database
 $conn = new mysqli($host, $username, $password, $database);
 
 if ($conn->connect_error) {
@@ -19,7 +18,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = $_POST['username'];
     $password = $_POST['password'];
 
-    // Gebruiker ophalen uit database
     $stmt = $conn->prepare("SELECT * FROM user WHERE username = ?");
     $stmt->bind_param("s", $username);
     $stmt->execute();
@@ -28,19 +26,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($result->num_rows === 1) {
         $user = $result->fetch_assoc();
 
-        // Controleer wachtwoord
         if (password_verify($password, $user['password'])) {
             $_SESSION['user_id'] = $user['id'];
             header("Location: home.php");
             exit;
         } else {
-            $error = "Ongeldig wachtwoord.";
+            $error = "Wachtwoord onjuist.";
         }
     } else {
         $error = "Gebruikersnaam bestaat niet.";
     }
 }
 ?>
+
+
 <!doctype html>
 <html>
 <head>
@@ -50,7 +49,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <body>
 <div class="container">
     <h2>Inloggen</h2>
-    <form method="post" action="">
+    <form method="post" action="deel.php">
         <div class="mb-3">
             <label for="username">Gebruikersnaam:</label>
             <input type="text" name="username" id="username" class="form-control" required>
@@ -62,7 +61,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <button type="submit" class="btn btn-primary">Login</button>
     </form>
     <?php if ($error) { echo "<div class='alert alert-danger'>$error</div>"; } ?>
-    <a href="regis.php">Nog geen account? Registreer hier.</a>
+    <a href="includes/regis.php">Nog geen account? Registreer hier.</a>
 </div>
 </body>
 </html>
