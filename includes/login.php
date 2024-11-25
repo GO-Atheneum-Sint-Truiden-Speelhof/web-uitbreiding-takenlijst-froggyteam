@@ -6,6 +6,7 @@ $username = 'root';
 $password = ''; // Databasewachtwoord indien nodig
 $database = 'todo';
 
+// Verbinding maken met database
 $conn = new mysqli($host, $username, $password, $database);
 
 if ($conn->connect_error) {
@@ -36,7 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $error = "Ongeldig wachtwoord.";
         }
     } else {
-        $error = "Gebruiker bestaat niet.";
+        $error = "Gebruikersnaam bestaat niet.";
     }
 }
 ?>
@@ -61,7 +62,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <button type="submit" class="btn btn-primary">Login</button>
     </form>
     <?php if ($error) { echo "<div class='alert alert-danger'>$error</div>"; } ?>
-    <a href="includes/regis.php">Nog geen account? Registreer hier.</a>
+    <a href="regis.php">Nog geen account? Registreer hier.</a>
 </div>
 </body>
 </html>

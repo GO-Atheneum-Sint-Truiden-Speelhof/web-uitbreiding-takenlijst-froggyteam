@@ -4,6 +4,7 @@ $username = 'root';
 $password = ''; // Databasewachtwoord indien nodig
 $database = 'todo';
 
+// Verbinding maken met database
 $conn = new mysqli($host, $username, $password, $database);
 
 if ($conn->connect_error) {
@@ -27,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     } else {
         $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
-        // Gebruiker toevoegen aan de database
+        // Gebruiker toevoegen aan database
         $stmt = $conn->prepare("INSERT INTO user (username, password) VALUES (?, ?)");
         $stmt->bind_param("ss", $username, $hashed_password);
 
@@ -64,3 +65,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </div>
 </body>
 </html>
+
