@@ -11,9 +11,6 @@
         <label for="datum">dead line</label><br>
         <p><input required id="datum" type="date" name="datum" size="46"></p>
 
-        <label for="lens">lens</label><br>
-        <p><input required id="lens" type="text" name="lens" size="46"></p>
-
         <label for="beschrijving">beschrijf u taak</label><br>
 		<p><textarea required id="beschrijving" name="beschrijving" rows="5" cols="50"></textarea></p>
     
