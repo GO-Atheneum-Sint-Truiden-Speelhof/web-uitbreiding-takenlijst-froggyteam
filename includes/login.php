@@ -1,14 +1,24 @@
 <?php
 session_start();
 
+$host = 'localhost';
+$username = 'root';
+$password = ''; // Voeg je databasewachtwoord hier toe als dat nodig is
+$database = 'todo'; // Zorg ervoor dat de database bestaat
+
+$conn = new mysqli($host, $username, $password, $database);
+
+if ($conn->connect_error) {
+    die("Verbinding mislukt: " . $conn->connect_error);
+}
+
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = $_POST['username'];
     $password = $_POST['password'];
 
-    $stmt = $conn->prepare("SELECT * FROM users WHERE username = ?");
-    $stmt->bind_param("s", $username);
-    $stmt->execute();
-    $result = $stmt->get_result();
+    $stmt ="SELECT * FROM user WHERE username";
+    $result = $conn->query($stmt);
 
     if ($result->num_rows === 1) {
         $user = $result->fetch_assoc();
