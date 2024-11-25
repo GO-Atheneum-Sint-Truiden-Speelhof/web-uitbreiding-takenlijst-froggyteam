@@ -6,7 +6,7 @@
 						<a href="includes/deel.php?page=deel" class="nav-link">takenlijst</a>
 					</li>
 					<li class="nav-item">
-						<a href="login2.php?page=login2" class="nav-link">login</a>
+						<a href="login.php?page=login" class="nav-link">login</a>
 					</li>
 				</ul>
 			</div>
