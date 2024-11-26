@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+/* Algemene styling */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Navigatiebalk */
+nav {
+    font-size: 20px;
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    margin-bottom: 50px;
+    padding: 10px 20px;
+    border-bottom: 3px solid #f1c40f;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-item {
+    margin-right: 20px;
+    display: inline-block;
+    color: #f1c40f;
+    text-decoration: none;
+}
+
+.nav-item:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* Jumbotron (container) */
+.jumbotron {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Tabel styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+th, td {
+    text-align: left;
+    padding: 12px 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f1c40f;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 14px;
+}
+
+td {
+    color: #333;
+}
+
+tr:hover td {
+    background-color: #f9f9f9;
+}
+
+/* Knoppen */
+button {
+    background-color: #f1c40f;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #d4ac0d;
+}
+
+/* Input en textarea styling */
+input[type="text"], input[type="date"], textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+input:focus, textarea:focus {
+    border-color: #f1c40f;
+    outline: none;
+}
+
+/* Footer */
+.footer {
+    margin-top: 20px;
+    background-color: #000;
+    padding: 10px;
+    border-top: 3px solid #f1c40f;
+    text-align: center;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 16px;
+    color: #fff;
+}
+
+.footer a {
+    color: #f1c40f;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* Form layout */
+form {
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+/* Sections layout */
+.left-section {
+    float: left;
+    width: 48%;
+    margin-right: 2%;
+}
+
+.right-section {
+    float: right;
+    width: 48%;
+}
+
+/* Knoppen centreren */
+.knoppen {
+    text-align: center;
+    margin: 20px 0;
+}

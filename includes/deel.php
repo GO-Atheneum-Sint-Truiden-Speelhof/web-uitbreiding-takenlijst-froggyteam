@@ -1,8 +1,8 @@
 <?php
 // Databaseconfiguratie
 $servername = "localhost";
-$username = "root"; 
-$password = ""; 
+$username = "root";
+$password = "";
 $dbname = "todo";
 
 // Maak een databaseverbinding
@@ -13,21 +13,27 @@ if ($conn->connect_error) {
 }
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    // Ontvang gegevens uit het formulier
     $titel = $_POST['titel'];
     $datum = $_POST['datum'];
     $beschrijving = $_POST['beschrijving'];
 
-    // SQL-query met prepared statements
-    $stmt = $conn->prepare("INSERT INTO taken (titel, datum, beschrijving) VALUES (?, ?, ?)");
-    $stmt->bind_param("sss", $titel, $datum, $beschrijving);
+    // Controleer of verplichte velden zijn ingevuld
+    if ($titel && $datum && $beschrijving) {
+        // SQL-query met prepared statements
+        $stmt = $conn->prepare("INSERT INTO taken (titel, datum, beschrijving) VALUES (?, ?, ?)");
+        $stmt->bind_param("sss", $titel, $datum, $beschrijving);
 
-    if ($stmt->execute()) {
-        echo "Taak succesvol opgeslagen!";
+        if ($stmt->execute()) {
+            echo "Taak succesvol opgeslagen!";
+        } else {
+            echo "Fout bij opslaan van taak: " . $conn->error;
+        }
+
+        $stmt->close();
     } else {
-        echo "Fout bij opslaan van taak: " . $conn->error;
+        echo "Alle velden zijn verplicht!";
     }
-
-    $stmt->close();
 }
 
 $conn->close();
