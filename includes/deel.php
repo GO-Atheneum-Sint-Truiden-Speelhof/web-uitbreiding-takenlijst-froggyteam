@@ -12,9 +12,7 @@ if ($conn->connect_error) {
     die("Verbinding mislukt: " . $conn->connect_error);
 }
 
-// Verwerk het formulier na verzending
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    // Ontvang gegevens uit het formulier
     $titel = $_POST['titel'];
     $datum = $_POST['datum'];
     $beschrijving = $_POST['beschrijving'];

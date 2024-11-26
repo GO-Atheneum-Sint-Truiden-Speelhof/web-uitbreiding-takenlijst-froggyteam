@@ -61,7 +61,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <button type="submit" class="btn btn-primary">Registreren</button>
     </form>
     <?php if ($message) { echo "<div class='alert alert-info'>$message</div>"; } ?>
-    <a href="login.php">Terug naar inloggen</a>
+    <a href="login2.php">Terug naar inloggen</a>
 </div>
 </body>
 </html>
