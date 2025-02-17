@@ -23,7 +23,3 @@
 * Veel includes en paginas met dezelfde naam (-1)
 
 Je behaalde een score van __27/35__ en __0/15__
-
-### Mondelinge verdediging ###
-Extra vraag: Waarom krijg ik volgende foutmelding als ik probeer een gebruiker te registreren:
-"Fatal error: Call to a member function bind_param() on boolean -> regis.php on line 22"
